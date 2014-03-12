@@ -1,4 +1,4 @@
-class ImporterBase
+class UnitBase
   def __init__(self):
     pass
 
