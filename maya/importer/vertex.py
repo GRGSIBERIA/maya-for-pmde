@@ -18,7 +18,7 @@ class Vertex(UnitBase):
     self.sdef_r1 = UnitBase.parsef3(self, args, 42)
 
   def to_line(self):
-    args = []
+    args = ["Vertex"]
     args.append(self.index)
     args.extend(self.pos)
     args.extend(self.normal)
