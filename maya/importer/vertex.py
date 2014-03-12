@@ -19,4 +19,17 @@ class Vertex(UnitBase):
 
   def to_line(self):
     args = []
-    
+    args.append(self.index)
+    args.extend(self.pos)
+    args.extend(self.normal)
+    args.append(self.edge_pow)
+    args.extend(self.uv)
+    for uv in self.add_uv:
+      args.extend(uv)
+    args.append(self.weight_type)
+    args.extend(self.bone_names)
+    args.extend(self.bone_weight)
+    args.extend(self.sdef_c)
+    args.extend(self.sdef_r0)
+    args.extend(self.sdef_r1)
+    return ",".join(args)
